@@ -1,0 +1,22 @@
+Register and Login
+10 more words
+
+Actually remember right and wrong choices
+
+Login via google
+
+Upload
+
+Upload your own photos.
+
+Advanced mode. Allows specifying how difficult a card was.
+
+Add english
+
+Stripe
+
+Allow users to view progress on all the cards
+
+
+Improve login flow
+enter email => if it doesn't exist yet, register
