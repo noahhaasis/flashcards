@@ -12,19 +12,17 @@ def index(request):
 
 @require_POST
 def guessed_correctly(request, card_id):
-    if request.user.is_authenticated:
-        card = get_object_or_404(Card, pk=card_id)
-        Guess.objects.create(user=request.user, card=card, correct=True)
-
-    context = { "card": get_random_card() }
-    return render(request, "card.html", context)
-
+    return guessed(request, card_id, correct=True)
 
 @require_POST
 def guessed_incorrectly(request, card_id):
+    return guessed(request, card_id, correct=False)
+
+def guessed(request, card_id, correct):
     if request.user.is_authenticated:
-        card = get_object_or_404(Card, pk=card_id)
-        Guess.objects.create(user=request.user, card=card, correct=False)
+        card = Card.objects.get(pk=card_id)
+        if card:
+            Guess.objects.create(user=request.user, card=card, correct=correct)
 
     context = { "card": get_random_card() }
     return render(request, "card.html", context)
