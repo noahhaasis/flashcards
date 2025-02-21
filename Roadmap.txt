@@ -1,11 +1,12 @@
-Register and Login
-10 more words
+DONE Register and Login
+DONE 10 more words
+DONE Actually remember right and wrong choices
 
-Actually remember right and wrong choices
+E-Mail Confirmation
+
+Better Design
 
 Login via google
-
-Upload
 
 Upload your own photos.
 
@@ -20,3 +21,7 @@ Allow users to view progress on all the cards
 
 Improve login flow
 enter email => if it doesn't exist yet, register
+
+Allow people to request a language. Email them once it exists
+
+If a user that's not logged in clicks correct or incorrect, show a message "Login to track your progress"

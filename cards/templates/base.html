@@ -20,6 +20,11 @@
             <a href="{% url 'login' %}">Login</a>
         {% endif %}
       </div>
+      {% if messages %}
+        {% for message in messages %}
+          <div class="alert alert-{{ message.tag }}">{{ message }}</div>
+        {% endfor%}
+      {% endif %}
     </header>
     <main>
         {% block content %}

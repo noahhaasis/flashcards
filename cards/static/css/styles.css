@@ -31,7 +31,7 @@ body {
   margin-right: 8px; 
 }
 
-  .container { /* New container for card and buttons */
+  #container { /* New container for card and buttons */
         margin-top: 80px;
       display: flex;
       flex-direction: column; /* Arrange card and buttons vertically */
