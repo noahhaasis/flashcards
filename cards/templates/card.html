@@ -1,0 +1,36 @@
+{% load static %}
+<div class="container">
+    <div id="card-area">
+        <div id="card-area">
+              <div class="card-container">
+      <div class="card" onclick="this.classList.toggle('flipped')">
+          <div class="front">
+              <div class="image-area" style="background-image: url({% static card.image_url %})"></div>
+              {{ card.german }}
+          </div>
+          <div class="back">
+              <div class="image-area" style="background-image: url({% static card.image_url %})"></div>
+              {{ card.turkish }}
+          </div>
+      </div>
+  </div>`
+
+        </div>
+     </div>
+    </div>
+    <div class="button-container">
+      <button 
+        class="button incorrect"
+        hx-post="/cards/{{card.id}}/incorrect"
+        hx-target="#card-area"
+        hx-swap="innerHTML"
+        >Incorrect</button>
+      <button 
+        class="button correct"
+        hx-post="/cards/{{card.id}}/correct"
+        hx-target="#card-area"
+        hx-swap="innerHTML"
+        >Correct</button>
+    </div>
+</div>
+
