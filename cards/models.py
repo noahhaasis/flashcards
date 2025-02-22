@@ -15,11 +15,20 @@ class Card(models.Model):
     def __str__(self):
         return f"{self.german} <=> {self.turkish}"
 
-class Guess(models.Model):
+class Review(models.Model):
     card = models.ForeignKey(Card, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    guessed_at = models.DateTimeField(auto_now_add=True)
-    correct = models.BooleanField()
+    occured_at = models.DateTimeField(auto_now_add=True)
+    # If the difficulty is None then the user picked this card to learn but hasn't reviewed it yet.
+    difficulty = models.PositiveSmallIntegerField(
+        choices=(
+            (1, "none"),
+            (2, "easy"),
+            (3, "good"),
+            (4, "hard"),
+            (5, "again"),
+        )
+    )
 
     def __str__(self):
         if self.correct:

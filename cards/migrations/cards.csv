@@ -1,0 +1,25 @@
+id,german,turkish,image_name
+1,Hund,"Köpek",dog.jpg
+2,Katze,Kedi,cat.jpg
+4,Fisch,"Balık",fish.jpg
+5,Vogel,"Kuş",bird.jpg
+6,Kuh,"İnek",cow.jpg
+7,Schwein,Domuz,pig.jpg
+8,Maus,Fare,mouse.jpg
+9,Pferd,"Atış",horse.jpg
+10,"Flügel",Kanat,wing.jpg
+11,Tier,Hayvan,animal.jpg
+12,Stadt,"Şehir",city.jpg
+13,Haus,Ev,house.jpg
+14,Wohnung,Daire,apartment.jpg
+15,"Straße",Sokak,street.jpg
+16,Flughafen,"Havalimanı",airport.jpg
+17,Bahnhof,"Tren istasyonu",train_station.jpg
+18,"Brücke","Köprü",bridge.jpg
+19,Hotel,Otel,hotel.jpg
+20,Restaurant,Restoran,restaurant.jpg
+21,Bauernhof,"Çiftlik",farm.jpg
+22,Gericht,Mahkeme,court.jpg
+23,Schule,Okul,school.jpg
+24,"Büro",Ofis,office.jpg
+25,Zimmer,Oda,room.jpg

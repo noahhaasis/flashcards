@@ -3,22 +3,17 @@ DONE 10 more words
 DONE Actually remember right and wrong choices
 DONE Add more cards
 
-When clicking Correct, replace the card with a selector ("hard"|"good"|"easy")
+DONE When clicking Correct, replace the card with a selector ("hard"|"good"|"easy")
   => GET to /cards/<id>/guesses/form
 
-Implement spaced repitition
-  - Two categories Initial Review ("New"), Recall ("Review")
-  /cards/new 
-  /cards/review
+DONE Nuke the DB
+DONE Add a migration to add initial data
 
+Simple Spaced Repetition
 
 E-Mail Confirmation
 
 Better Design. A bit of cleanup
-
-Dump the state of the sqlite DB into a script. Use it to create a DB Migration
-
-Advanced mode. Allows specifying how difficult a card was.
 
 Login via google
 

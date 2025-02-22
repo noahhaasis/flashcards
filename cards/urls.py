@@ -10,4 +10,5 @@ urlpatterns = [
     path("cards/<int:card_id>/guess/form", views.get_guess_form, name="guess_form"),
     path("cards/new", views.new_cards, name="new_cards"),
     path("cards/review", views.review_cards, name="review_cards"),
+    path("cards/<int:card_id>/learn", views.start_learning_card, name="learn_card")
 ]
