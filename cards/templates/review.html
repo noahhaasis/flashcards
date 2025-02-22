@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="container">
+  <div id="new-review-nav">
+    <a
+      id="tab-new"
+      class="nav-not-selected"
+      href="/cards/new"
+    >
+      New
+    </a>
+    <a
+      id="tab-review"
+      class="nav-selected"
+      href="javascript: void(0)"
+    >
+      Review
+    </a>
+  </div>
+
+  {% include "card.html" %}
+
+  <form id="stack-buttons-form">
+    {% csrf_token %}
+    <input
+      type="submit"
+      class="button incorrect"
+      hx-post="/cards/{{card.id}}/incorrect"
+      hx-target="#container"
+      hx-swap="outerHTML"
+      value="Incorrect"
+      ></input>
+    <input
+      type="submit"
+      class="button correct"
+      hx-post="/cards/{{card.id}}/correct"
+      hx-target="#container"
+      hx-swap="outerHTML"
+      value="Correct"
+      ></input>
+  </form>
+</div>
+{% endblock %}

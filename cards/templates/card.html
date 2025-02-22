@@ -1,37 +1,14 @@
 {% load static %}
-<div id="container">
-    <div id="card-area">
-      <div class="card-container">
-        <div class="card" onclick="this.classList.toggle('flipped')">
-          <div class="front">
-              <div class="image-area" style="background-image: url({% static card.image_url %})"></div>
-              {{ card.german }}
-          </div>
-          <div class="back">
-              <div class="image-area" style="background-image: url({% static card.image_url %})"></div>
-              {{ card.turkish }}
-          </div>
+<div id="card-area">
+  <div class="card-container">
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="front">
+          <div class="image-area" style="background-image: url({% static card.image_url %})"></div>
+          {{ card.german }}
       </div>
-  </div>`
-
-  <form id="card-form">
-    {% csrf_token %}
-    <input
-      type="submit"
-      class="button incorrect"
-      hx-post="/cards/{{card.id}}/incorrect"
-      hx-target="#container"
-      hx-swap="outerHTML"
-      value="Incorrect"
-      ></input>
-    <input
-      type="submit"
-      class="button correct"
-      hx-post="/cards/{{card.id}}/correct"
-      hx-target="#container"
-      hx-swap="outerHTML"
-      value="Correct"
-      ></input>
-  </form>
+      <div class="back">
+          <div class="image-area" style="background-image: url({% static card.image_url %})"></div>
+          {{ card.turkish }}
+      </div>
+  </div>
 </div>
-

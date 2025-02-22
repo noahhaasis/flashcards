@@ -10,6 +10,14 @@ def index(request):
     context = { "card": get_random_card() }
     return render(request, "index.html", context)
 
+def new_cards(request):
+    context = { "card": get_random_card() }
+    return render(request, "new.html", context)
+
+def review_cards(request):
+    context = { "card": get_random_card() }
+    return render(request, "review.html", context)
+
 @require_POST
 def guessed_correctly(request, card_id):
     return guessed(request, card_id, correct=True)

@@ -39,8 +39,9 @@ body {
   }
 
 .card-container {
+  margin-top: 10px;
   width: 410px;
-  height: 520px;
+  height: 500px;
   perspective: 1000px;
   max-width: 90vw; /* Limit the width to 90% of the viewport width */
 }
@@ -92,16 +93,18 @@ width: 80%;
   transform: rotateY(180deg);
   border-top: 5px solid #4caf50; /* Green border */
   }
-  #card-form {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    width: 400px;
-    max-width: 90vw; /* Limit the width to 90% of the viewport width */
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .button {
+
+#stack-buttons-form {
+  display: flex;
+  justify-content: center;
+  width: 400px;
+  max-width: 90vw; /* Limit the width to 90% of the viewport width */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+
+.button {
   padding: 15px;
   font-size: 1.2em;
   border: none;
@@ -112,15 +115,27 @@ width: 80%;
   font-weight: bold;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add the shadow */
-  }
-  .correct {
+}
+
+.correct {
   background-color: #a0f0a0;
   color: darkgreen;
-  }
-  .incorrect {
+}
+.incorrect {
   background-color: #f0a0a0;
   color: darkred;
-  }
+}
+
+#button-learn {
+  background-color: #a0f0a0;
+  color: darkgreen;
+}
+
+#button-next {
+  text-decoration: none;
+  background-color: #d0d2d6;
+}
+
 .errorlist {
     color: red;
     margin-top: 10px;
@@ -170,4 +185,45 @@ button {
 .login-container a {
     text-decoration: none;
     color: #333; /* Adjust color as needed */
+}
+
+#new-review-nav {
+  display: flex;
+  width: 100%;
+}
+
+#new-review-nav a {
+  flex: 1;
+  display: block;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+  font-weight: 600;
+  text-decoration: none;
+  color: #4b5563;
+}
+
+.nav-selected {
+  border-bottom: none;
+  background-color: #d0d2d6;
+  outline: none;
+  cursor: default;
+}
+
+.nav-not-selected {
+  border-bottom: 1px solid #d1d5db;
+  background-color: #f3f4f6;
+  cursor: pointer;
+}
+
+#tab-new {
+ border-top-left-radius: 5px;
+ border-bottom-left-radius: 5px
+}
+
+#tab-review {
+ border-top-right-radius: 5px;
+ border-bottom-right-radius: 5px
 }
