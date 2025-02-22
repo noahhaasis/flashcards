@@ -27,15 +27,15 @@
       type="submit"
       class="button incorrect"
       hx-post="/cards/{{card.id}}/incorrect"
-      hx-target="#container"
+      hx-target="#card-area"
       hx-swap="outerHTML"
-      value="Incorrect"
+      value="Again"
       ></input>
     <input
       type="submit"
       class="button correct"
-      hx-post="/cards/{{card.id}}/correct"
-      hx-target="#container"
+      hx-get="/cards/{{card.id}}/guess/form"
+      hx-target="#card-area"
       hx-swap="outerHTML"
       value="Correct"
       ></input>

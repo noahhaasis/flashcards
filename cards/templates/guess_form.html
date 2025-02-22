@@ -1,0 +1,29 @@
+<div id="card-area">
+  <div class="card-container">
+
+      <div class="card difficulty-button-group">
+        <form style="display: flex; flex-direction: column;">
+          {% csrf_token %}
+          <input
+            type="submit"
+            hx-post="/cards/{{card_id}}/correct?difficulty=hard"
+            hx-target="#card-area"
+            hx-swap="outerHTML"
+            class="button difficulty-button hard" value="Hard"></button>
+          <input
+            type="submit"
+            hx-post="/cards/{{card_id}}/correct?difficulty=good"
+            hx-target="#card-area"
+            hx-swap="outerHTML"
+            class="button difficulty-button good" value="Good"></button>
+          <input
+            type="submit"
+            hx-post="/cards/{{card_id}}/correct?difficulty=easy"
+            hx-target="#card-area"
+            hx-swap="outerHTML"
+            class="button difficulty-button easy" value="Easy"></button>
+        </form>
+      </div>
+
+    </div>
+</div>

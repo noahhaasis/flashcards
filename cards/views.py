@@ -18,8 +18,13 @@ def review_cards(request):
     context = { "card": get_random_card() }
     return render(request, "review.html", context)
 
+def get_guess_form(request, card_id):
+    return render(request, "guess_form.html", { "card_id": card_id })
+
 @require_POST
 def guessed_correctly(request, card_id):
+    difficulty = request.GET.get("difficulty")
+    # TODO(Noah)
     return guessed(request, card_id, correct=True)
 
 @require_POST

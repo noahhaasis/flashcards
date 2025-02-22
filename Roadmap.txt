@@ -1,23 +1,42 @@
 DONE Register and Login
 DONE 10 more words
 DONE Actually remember right and wrong choices
+DONE Add more cards
+
+When clicking Correct, replace the card with a selector ("hard"|"good"|"easy")
+  => GET to /cards/<id>/guesses/form
+
+Implement spaced repitition
+  - Two categories Initial Review ("New"), Recall ("Review")
+  /cards/new 
+  /cards/review
+
 
 E-Mail Confirmation
 
-Better Design
+Better Design. A bit of cleanup
 
-Login via google
-
-Upload your own photos.
+Dump the state of the sqlite DB into a script. Use it to create a DB Migration
 
 Advanced mode. Allows specifying how difficult a card was.
 
+Login via google
+
+Refactoring
+
+Upload your own photos.
+(Make it specific to the language you're learning? Or not?) => Later feature
+
 Add english
+
+Add a button to pronounce words
+Example sentences
+
+=====> Ask people for feedback
 
 Stripe
 
 Allow users to view progress on all the cards
-
 
 Improve login flow
 enter email => if it doesn't exist yet, register

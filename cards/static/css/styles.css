@@ -190,6 +190,7 @@ button {
 #new-review-nav {
   display: flex;
   width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #new-review-nav a {
@@ -227,3 +228,32 @@ button {
  border-top-right-radius: 5px;
  border-bottom-right-radius: 5px
 }
+
+.difficulty-button-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 1px solid lightgray;
+}
+
+.hard {
+  background-color: #FFC107
+}
+.good {
+  background-color: #C0CA33
+}
+.easy {
+  background-color: #66BB6A
+}
+
+.difficulty-button {
+  margin: 10px;
+  height: 6rem;
+  width: 22rem;
+  color: #212121;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
