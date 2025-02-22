@@ -32,7 +32,7 @@ body {
 }
 
   #container { /* New container for card and buttons */
-        margin-top: 70px;
+        margin-top: 50px;
       display: flex;
       flex-direction: column; /* Arrange card and buttons vertically */
       align-items: center;     /* Center horizontally within the container */
