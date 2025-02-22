@@ -32,7 +32,7 @@ body {
 }
 
   #container { /* New container for card and buttons */
-        margin-top: 80px;
+        margin-top: 70px;
       display: flex;
       flex-direction: column; /* Arrange card and buttons vertically */
       align-items: center;     /* Center horizontally within the container */
@@ -92,14 +92,14 @@ width: 80%;
   transform: rotateY(180deg);
   border-top: 5px solid #4caf50; /* Green border */
   }
-  .button-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  width: 400px;
-  max-width: 90vw; /* Limit the width to 90% of the viewport width */
-  margin-left: auto;
-  margin-right: auto;
+  #card-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    width: 400px;
+    max-width: 90vw; /* Limit the width to 90% of the viewport width */
+    margin-left: auto;
+    margin-right: auto;
   }
   .button {
   padding: 15px;

@@ -14,26 +14,24 @@
       </div>
   </div>`
 
-  <div class="button-container">
-    <form>
-      {% csrf_token %}
-      <input
-        type="submit"
-        class="button incorrect"
-        hx-post="/cards/{{card.id}}/incorrect"
-        hx-target="#container"
-        hx-swap="outerHTML"
-        value="Incorrect"
-        ></input>
-      <input
-        type="submit"
-        class="button correct"
-        hx-post="/cards/{{card.id}}/correct"
-        hx-target="#container"
-        hx-swap="outerHTML"
-        value="Correct"
-        ></input>
-    </form>
-  </div>
+  <form id="card-form">
+    {% csrf_token %}
+    <input
+      type="submit"
+      class="button incorrect"
+      hx-post="/cards/{{card.id}}/incorrect"
+      hx-target="#container"
+      hx-swap="outerHTML"
+      value="Incorrect"
+      ></input>
+    <input
+      type="submit"
+      class="button correct"
+      hx-post="/cards/{{card.id}}/correct"
+      hx-target="#container"
+      hx-swap="outerHTML"
+      value="Correct"
+      ></input>
+  </form>
 </div>
 
