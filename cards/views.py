@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.views.decorators.http import require_POST
 from django.template import loader
@@ -21,8 +21,7 @@ def start_learning_card(request, card_id):
     card = Card.objects.get(pk=card_id)
     if card:
         Review.objects.create(user=request.user, card=card, difficulty=1)
-    context = { "card": random_fresh_card(request.user) }
-    return render(request, "card.html", context)
+    return redirect("/cards/new")
 
 
 
@@ -30,8 +29,7 @@ def start_learning_card(request, card_id):
 
 @login_required
 def review_cards(request):
-    context = { "card": get_next_card_to_review(request.user) }
-    return render(request, "review.html", context)
+    return render(request, "review_full.html", get_next_card_to_review(request.user))
 
 def get_guess_form(request, card_id):
     return render(request, "guess_form.html", { "card_id": card_id })
@@ -66,10 +64,5 @@ def reviewed_card(request, card_id, difficulty):
     if card:
         Review.objects.create(user=request.user, card=card, difficulty=difficulty_number)
 
-    next_card = get_next_card_to_review(request.user)
-    if next_card:
-        context = { "card": next_card }
-        return render(request, "card.html", context)
-    else:
-        pass # TODO(Noah)
+    return render(request, "review.html", get_next_card_to_review(request.user))
 

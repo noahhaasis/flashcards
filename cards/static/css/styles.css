@@ -1,7 +1,6 @@
 body {
   display: flex;
   flex-direction: column; /* Arrange items vertically */
-  justify-content: center; /* Vertically center content */
   align-items: center;     /* Horizontally center content */
   min-height: 100vh;
   margin: 0;
@@ -32,7 +31,7 @@ body {
 }
 
   #container { /* New container for card and buttons */
-        margin-top: 50px;
+        margin-top: 70px;
       display: flex;
       flex-direction: column; /* Arrange card and buttons vertically */
       align-items: center;     /* Center horizontally within the container */

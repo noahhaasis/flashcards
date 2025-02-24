@@ -8,7 +8,7 @@
       class="nav-selected"
       href="javascript: void(0)"
     >
-      New
+      Catalog
     </a>
     <a
       id="tab-review"
@@ -21,17 +21,13 @@
 
   {% include "card.html" %}
 
-  <form id="stack-buttons-form">
+  <form id="stack-buttons-form" action="/cards/{{card.id}}/learn" method="post">
     {% csrf_token %}
     <input
       id="button-learn"
       type="submit"
       class="button"
-      hx-post="/cards/{{card.id}}/learn"
-      hx-target="#card-area"
-      hx-swap="outerHTML"
-      value="Learned"
-      ></input>
+      value="Learned">
     <a id="button-next" href="/cards/new" class="button">Skip</a>
   </form>
 </div>

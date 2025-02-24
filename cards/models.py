@@ -31,9 +31,6 @@ class Review(models.Model):
     )
 
     def __str__(self):
-        if self.correct:
-            return f"Correct guess by {self.user.username} on {self.card}"
-        else:
-            return f"Incorrect guess by {self.user.username} on {self.card}"
+        return f"{self.difficulty} guess by {self.user.username} on {self.card}"
 
 

@@ -7,19 +7,19 @@
           <input
             type="submit"
             hx-post="/cards/{{card_id}}/correct?difficulty=hard"
-            hx-target="#card-area"
+            hx-target="#container"
             hx-swap="outerHTML"
             class="button difficulty-button hard" value="Hard"></button>
           <input
             type="submit"
             hx-post="/cards/{{card_id}}/correct?difficulty=good"
-            hx-target="#card-area"
+            hx-target="#container"
             hx-swap="outerHTML"
             class="button difficulty-button good" value="Good"></button>
           <input
             type="submit"
             hx-post="/cards/{{card_id}}/correct?difficulty=easy"
-            hx-target="#card-area"
+            hx-target="#container"
             hx-swap="outerHTML"
             class="button difficulty-button easy" value="Easy"></button>
         </form>
