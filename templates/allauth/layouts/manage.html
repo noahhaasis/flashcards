@@ -1,0 +1,21 @@
+{% extends 'allauth/layouts/base.html' %}
+
+{% block auth_content %}
+    <h1>{% block manage_header %}{% endblock %}</h1>
+    
+    {% block manage_content %}
+    {% endblock %}
+    
+    {% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+            <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}</div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    
+    <div class="manage-links">
+        {% block manage_links %}
+        {% endblock %}
+    </div>
+{% endblock %}

@@ -9,13 +9,19 @@ DONE When clicking Correct, replace the card with a selector ("hard"|"good"|"eas
 DONE Nuke the DB
 DONE Add a migration to add initial data
 
-Simple Spaced Repetition
+DONE Simple Spaced Repetition
+
+DONE Login via google
+DONE Fix notifications. They should cover everything else and you should be able to remove them.
+
+
+Fix bug where the solution is displayed before the question.
+
+Deploy to cloud
 
 E-Mail Confirmation
 
 Better Design. A bit of cleanup
-
-Login via google
 
 Refactoring
 
@@ -23,6 +29,7 @@ Upload your own photos.
 (Make it specific to the language you're learning? Or not?) => Later feature
 
 Add english
+Persian?
 
 Add a button to pronounce words
 Example sentences

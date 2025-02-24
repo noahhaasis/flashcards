@@ -1,0 +1,21 @@
+{% extends 'allauth/layouts/base.html' %}
+
+{% block auth_content %}
+    <h1>{% block auth_header %}{% endblock %}</h1>
+    
+    {% block auth_form %}
+    {% endblock %}
+    
+    {% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+            <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}</div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    
+    <div class="auth-links">
+        {% block auth_links %}
+        {% endblock %}
+    </div>
+{% endblock %}

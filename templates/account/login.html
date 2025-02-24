@@ -1,0 +1,29 @@
+{% extends 'allauth/layouts/entrance.html' %}
+{% load socialaccount %}
+
+{% block auth_header %}Log In{% endblock %}
+
+{% block auth_form %}
+    <form class="login" method="POST" action="{% url 'account_login' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}
+        <button class="primaryAction" type="submit">Log In</button>
+    </form>
+
+    <div class="social-login">
+        <div class="separator">or</div>
+        <a href="{% provider_login_url 'google' %}" class="google-login-button">
+            <img src="https://www.google.com/favicon.ico" alt="Google Icon" class="google-icon">
+            <span>Continue with Google</span>
+        </a>
+    </div>
+{% endblock %}
+
+{% block auth_links %}
+    <a href="{% url 'account_reset_password' %}">Forgot Password?</a>
+    <br>
+    <a href="{{ signup_url }}">Don't have an account? Sign up</a>
+{% endblock %}

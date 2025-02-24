@@ -150,8 +150,13 @@ label {
     margin-bottom: 5px;
 }
 
+form.login, form.signup {
+    width: 100%;
+}
+
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="email"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -247,6 +252,121 @@ button {
   background-color: #66BB6A
 }
 
+/* Social Login Styles */
+.social-login {
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #666;
+    margin: 1rem 0;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+}
+
+.separator::before {
+    margin-right: .5em;
+}
+
+.separator::after {
+    margin-left: .5em;
+}
+
+.google-login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+
+.google-login-button:hover {
+    background-color: #f8f8f8;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.google-login-button .google-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 0.75rem;
+}
+
+/* Auth styles */
+.auth-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.auth-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.auth-box h1 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: #333;
+    text-align: center;
+}
+
+.auth-links {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.auth-links a {
+    color: #2196f3;
+    text-decoration: none;
+}
+
+.auth-links a:hover {
+    text-decoration: underline;
+}
+
+.messages {
+    margin-bottom: 1rem;
+}
+
+.alert {
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.alert-error {
+    background-color: #f44336;
+}
+
+.alert-success {
+    background-color: #4caf50;
+}
+
+.alert-info {
+    background-color: #2196f3;
+}
+
 .difficulty-button {
   margin: 10px;
   height: 6rem;
@@ -256,3 +376,70 @@ button {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
+/* Fixed container centered at the top */
+#messages {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  z-index: 1000;
+}
+
+/* Base styling for individual messages */
+.message {
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center; /* Vertically align content */
+  gap: 10px; /* Space between button and text */
+}
+
+/* Styling for different message types */
+.message.success {
+  background-color: #e7f3fe;
+  border-color: #b3d8fd;
+  color: #31708f;
+}
+
+.message.warning {
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  color: #8a6d3b;
+}
+
+.message.error {
+  background-color: #f2dede;
+  border-color: #ebcccc;
+  color: #a94442;
+}
+
+/* Close button styling */
+.message .close-btn {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px;
+  margin: 0;
+}
+
+/* Ensuring the button stays aligned properly */
+.message .close-btn:focus {
+  outline: none;
+}
+
+/* Message text should take remaining space */
+.message p {
+  margin: 0;
+  flex-grow: 1;
+}
+.close-btn {
+    width: 10px;
+    margin-right: 10px;
+    color: black;
+}
