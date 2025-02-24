@@ -2,26 +2,23 @@ DONE Register and Login
 DONE 10 more words
 DONE Actually remember right and wrong choices
 DONE Add more cards
-
 DONE When clicking Correct, replace the card with a selector ("hard"|"good"|"easy")
   => GET to /cards/<id>/guesses/form
-
 DONE Nuke the DB
 DONE Add a migration to add initial data
-
 DONE Simple Spaced Repetition
-
 DONE Login via google
 DONE Fix notifications. They should cover everything else and you should be able to remove them.
-
+DONE Deploy to cloud
+DONE SSL
+DONE Get a domain
 
 Fix bug where the solution is displayed before the question.
-
-Deploy to cloud
 
 E-Mail Confirmation
 
 Better Design. A bit of cleanup
+Security
 
 Refactoring
 
