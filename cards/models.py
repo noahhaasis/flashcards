@@ -12,6 +12,12 @@ class Card(models.Model):
     def image_url(self):
         return os.path.join('images', f'{self.image_name}')
 
+    @property
+    def audio_url(self):
+        image_base = os.path.splitext(self.image_name)[0]
+        audio_filename = f"{image_base}-tk.mp3"
+        return os.path.join('/audio/', audio_filename)
+
     def __str__(self):
         return f"{self.german} <=> {self.turkish}"
 

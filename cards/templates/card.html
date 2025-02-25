@@ -8,7 +8,16 @@
       </div>
       <div class="back">
           <div class="image-area" style="background-image: url({% static card.image_url %})"></div>
-          {{ card.turkish }}
+          <div style="display: flex; align-items: center">
+            {{ card.turkish }}
+            <button
+              style="background-color: transparent; margin-left: 5px;"
+              onclick="event.stopPropagation(); document.getElementById('pronounciation').play()"
+              >
+              <img style="width:20px; height:20px" src="{% static "svg/audio.svg" %}"> </img>
+            </button>
+          </div>
+          <audio id="pronounciation" src="{% static card.audio_url %}"></audio>
       </div>
     </div>
   </div>
